@@ -1,0 +1,1232 @@
+/* Code CSS de notre site */ 
+
+html{
+    height: 100%;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+}
+
+/* CSS du header */
+
+header{
+    width: 100%;
+    height : 70px;
+    top : 0;
+    position : fixed;
+    background-color: #e53935;
+    margin:0;
+    left:0;
+    align-items: center;
+    z-index: 1;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav{
+    float: left;
+    margin: 22px 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    margin: auto 20px;
+}
+
+.logo{
+    margin: 10px 20px;
+    float: left;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.form_search_bar{
+    float: right;
+    margin: 20px 20px;
+    width: 25%;
+}
+
+.text_bar{
+    height: 24px;
+    width: 80%;
+    border-radius: 8px;
+    border: none;
+}
+
+.submit_button{
+    width: 16px;
+    height: 16px;
+    top:3px;
+    margin: 0px 0px 0px 5px;
+    position: relative;
+    background: url('../icons/search.png');
+    border: none;
+}
+
+.link{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 24px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 22px;
+}
+
+.link:hover{
+    transition : all 0.3s ease-in-out; 
+    border-color: white;
+}
+
+/* CSS du footer */ 
+
+footer{
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 30px 20px;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #e53935;
+    color: #fff;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.mentions_legales{
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row:2;
+    margin: 0px 0px 4px 0px;
+    font-size: 10px;
+}
+
+.about_us{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 1;
+}
+
+.social{
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row:1;
+}
+
+.support{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row:1;
+}
+
+.contact{
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row:1;
+}
+
+.social_media{
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start:1;
+    grid-row-end: 3;
+}
+
+.sm_logo{
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+    text-decoration: none;
+    width: 50%;
+}
+
+#fb img{
+    background-color: #fff;
+}
+
+/* CSS de la page principale */
+/* CSS du message d'accueil avec la recommandation d'un film à voir*/ 
+
+.New{
+    display: inline-grid;
+    margin: 70px 0px 0px 0px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+    width: 100%;
+    height: 800px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: url('../img/Interstellar.jpg') no-repeat center;
+    background-size: cover;
+    align-items: center;
+}
+
+.New h1{
+    grid-column-start : 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 30px;
+}
+
+.New h2{
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    font-size: 50px;
+}
+
+/* CSS du contenant principal de la page d'accueil (lectures en cours, nouveautés et recommandations personnalisées). */
+
+.main_contain{
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 100px);
+    width: 100%;
+    height: 1050px;
+    background-color: #424242;
+    align-items: center;
+}
+
+.main_contain h1{
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    text-align:center;
+    font-size: 32px;
+    color: #e53935;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 40px;
+}
+
+.slideshow{
+    display: inline-grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.slideshow h2{
+    position: absolute;
+    margin-top: 30px;
+    grid-column: 1;
+    grid-row: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 24px;
+}
+
+.slideshow a{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin: 0px 20px;
+}
+
+.slideshow a img{
+    max-height: 200px;
+}
+
+.Bloc1{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.Bloc2{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 8;
+}
+
+.Bloc3{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 11;
+}
+
+/* CSS de la page de recherche */ 
+
+.res_search{
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px repeat(25, 100px);
+    width: 100%;
+    height: 2580px;
+    margin: 70px 0px 0px 0px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    color: #424242;
+    align-items: center;
+}
+
+.res_search h1{
+    grid-column-start: 2;
+    grid-column-end: 13;
+    grid-row: 1;
+    margin: 0;
+    text-align: left;
+    font-size: 24px;
+}
+
+.res_search article{
+    display: inline-grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100px 100px 100px 100px;
+    width: 100%;
+    height: 400px;
+    border-bottom: 2px solid #424242;
+    align-items: center;
+}
+
+.res_search article a{
+    padding: 0;
+}
+
+.res_search nav{
+    grid-row: 26;
+    grid-column-start: 5;
+    grid-column-end: 8;
+    text-align: center;
+}
+
+.res_search nav a{
+    color: #424242;
+    text-decoration: none;
+}
+
+.res_search nav a:hover{
+    text-decoration: underline;
+    text-decoration-color: #424242;
+}
+
+.res_1{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+.res_2{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 10;
+}
+
+.res_3{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 10;
+    grid-row-end: 14;
+}
+
+.res_4{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 14;
+    grid-row-end: 18;
+}
+
+.res_5{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 18;
+    grid-row-end: 22;
+}
+
+.res_6{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 22;
+    grid-row-end: 26;
+}
+
+.affiche{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    justify-self: center;
+    max-width: 80%;
+    max-height: 350px;
+}
+
+.titre{
+    text-decoration: none;
+    grid-column-start: 5;
+    grid-column-end: 11;
+    grid-row: 2;
+    margin: 0px 0px 60px 0px;
+    padding: 0;
+    justify-self: start;
+}
+
+.titre a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #e53935;
+    font-family: 'Oswald', sans-serif;
+}
+
+.titre a:hover{
+    text-decoration: underline;
+    text-decoration-color: #e53935;
+}
+
+.realisateur{
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row: 2;
+    margin: 50px 0px 0px 0px;
+    font-size: 20px;
+    justify-self: start;
+}
+
+.synops_content{
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row: 3;
+    margin: 50px 0px 0px 0px;
+    font-size: 16px;
+}
+
+/* CSS de la page détaillée d'une série */ 
+
+.entete{
+
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    margin: 70px 0px 0px 0px;
+    align-items: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Permet de changer l'image de fond en fonction du type d'oeuvre. */ 
+
+.img_back_series{
+    background: url('../img/Chernobyl.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.img_back_films{ 
+    background: url('../img/JP3.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.entete .play-content{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.entete .play-content img{
+    border: #fff solid 1px;
+    max-width: 100%;
+    max-height: 350px;
+}
+
+.entete h1{
+    grid-column-start: 5;
+    grid-column-end: 12;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 28px;
+    margin-top: 60px;
+}
+
+.entete p{
+    grid-column-start: 5;
+    grid-column-end: 12;
+    grid-row: 3;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom : 60px;
+}
+
+.fav_button{
+    grid-row: 1;
+    grid-column: 12;
+    align-self: center;
+    text-align: center;
+    background-color: #e53935;
+    width: 62px;
+    height: 34px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+.fav_button img{
+    border: none;
+}
+
+.details_comments{
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(13, 80px);
+    width: 100%;
+    height: 1020px;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.details_comments h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.synops{
+    margin: 20px 0px 0px 0px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: 1;
+}
+
+.reco{
+    margin: 20px 0px 0px 0px;
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row: 1;
+    text-align: center;
+}
+
+.avis{
+    grid-column-start: 2;
+    grid-column-end: 5 ;
+    grid-row: 3;
+    align-self: center;
+    margin: 0;
+}
+
+.details_comments p{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row : 2;
+    width: 100%;
+    margin: 0;
+    border-bottom: #424242 solid 1px;
+    padding-bottom: 20px ;
+}
+
+.details_comments h3{
+    font-size: 20px;
+    color: #e53935;
+}
+
+.details_comments article{
+    width: 100%;
+    align-self: center;
+}
+
+.recommandation{
+    grid-column-start: 9;
+    grid-column-end: 12 ;
+    grid-row-start: 2;
+    grid-row-end: 14;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, 80px);
+    width: 100%;
+    height: 880px;
+    justify-items: center;
+    text-align: center;
+    border-left: #424242 solid 1px;
+    font-size: 16px;
+}
+
+.recommandation img{
+    max-height: 300px;
+    max-width: 80%;
+}
+
+.recommandation h4 a{
+    text-decoration: none;
+    color: #424242;
+}
+
+.recommandation h4 a:hover{
+    text-decoration: underline;
+}
+
+.img1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4 ;
+}
+
+.name_1{
+    grid-column: 2;
+    grid-row:5;
+}
+
+.img2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 9; 
+}
+
+.name_2{
+    grid-column: 2;
+    grid-row: 10;
+}
+
+.other_reco{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 11;
+    color: #e53935;
+}
+
+#zone_avis{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    align-items: center;
+    border-bottom: 1px solid #424242;
+    margin:0;
+}
+
+.texte_avis{
+    width: 100%;
+    height: 70%;
+    border: 1px solid #424242;
+    border-radius: 8px;
+    color: #424242;
+    margin: 0px 0px 5px 0px;
+}
+
+.comment_button{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    width: 30%;
+    height: 30px;
+    background-color: #424242;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 6px 0px 0px 0px;
+}
+
+.avis_1{
+    grid-column-start: 2;
+    grid-column-end: 8 ;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.avis_2{
+    grid-column-start: 2;
+    grid-column-end: 8 ;
+    grid-row-start: 9;
+    grid-row-end: 11;
+}
+
+.avis_3{
+    grid-column-start: 2;
+    grid-column-end: 8 ;
+    grid-row-start: 11;
+    grid-row-end: 13;
+}
+
+.other_com{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row: 12;
+    text-decoration: none;
+    margin-top: 85px;
+    color: #e53935;
+    font-size: 20px;
+}
+
+.other_com:hover {
+text-decoration: underline;
+}
+
+.episod_list{
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    background-color: #424242;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.episod_list h2{
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row: 1;
+    font-size: 26px;
+}
+
+.episod_list section{
+    display: inline-grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+.episod_list a img{
+    margin: 0px 30px;
+}
+
+.episod_list h3{
+    font-size: 18px;
+    grid-row: 3;
+    margin-left: 20px;
+}
+
+/* CSS de la page About_us */
+
+.about-us{
+    margin-top: 70px;
+    display: inline-grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(20, 100px);
+    width: 100%;
+    height: 2000px;
+    background-color: #fff;
+    color: #424242;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us h1{
+    color: #e53935;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row: 1;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.about-us_intro{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row: 2;
+}
+
+.about-us h2{
+    color: #e53935;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    align-self: center;
+}
+
+.about-us img{
+    max-height: 300px;
+}
+
+.about-us p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+
+.about-us-img-1{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    justify-self: center;
+}
+
+.about-us-img-2{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row-start: 10;
+    grid-row-end: 13;
+    justify-self: center ;
+}
+
+.about-us-img-3{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row-start: 16;
+    grid-row-end: 19;
+    justify-self: center;
+}
+
+.about-us-h2-1{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row:3;
+}
+
+.about-us-h2-2{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row:9;
+}
+
+.about-us-h2-3{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row:15;
+}
+
+.about-us-p-1{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.about-us-p-2{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row-start: 13;
+    grid-row-end:15 ;
+}
+
+.about-us-p-3{
+    grid-column-start: 2;
+    grid-column-end:8;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+/* CSS des pages Films et Séries */ 
+
+.Film-series_page{
+    margin-top: 70px;
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(13, 100px);
+    width: 100%;
+    height: 1350px;
+    background-color: #424242;
+    align-items: center;
+}
+
+.Film-series_page h1{
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    text-align:center;
+    font-size: 32px;
+    color: #e53935;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 40px;
+}
+
+.Bloc4{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 11;
+    grid-row-end: 14;
+}
+
+/* CSS de la page de lecture d'une oeuvre */ 
+
+.lecture_episode{
+    height: 100%;
+    text-align: center;
+    background-color: #424242;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.lecture_episode h1{
+    font-size: 32px;
+    color: #e53935;
+    font-family: 'Oswald', sans-serif;
+    margin: 0px 0px 30px 0px;
+}
+
+video {
+    max-width: 80%;
+}
+
+.retour-aside{
+    background-color: #424242;
+    margin: 0;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.retour a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: #e53935;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.retour a:hover{
+    text-decoration: underline;
+}
+
+/* CSS de la page des favoris */ 
+
+.favoris{
+    width: 100%;
+    margin: 70px 0px 0px 0px;
+    padding: 0;
+    display: inline-grid;
+    background-color: #424242;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    min-height: 86%;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.favoris h1{
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    justify-self: center;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Code CSS permettant d'adapter le design du site. */ 
+
+
+@media only screen and (max-width: 900px) {
+
+    /* CSS du header responsive */
+
+    header{
+    display: inline-grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 50px);
+    align-items: center;
+    height : 100px;
+    font-size: 18px;
+    }
+
+    .logo{
+        grid-column-start: 1;
+        grid-column-end:4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: 0px 20px;
+        float: left;
+    }
+
+    .m-left{
+        float: none;
+        margin: auto;
+    }
+    
+    .m-right{
+        float: none;
+        margin: auto;
+    }
+
+    header nav{
+        grid-column-start: 4;
+        grid-column-end:12;
+        grid-row: 2;   
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .link{
+        margin: auto 3%;
+        padding-bottom: 12px;
+    }
+
+    .form_search_bar{
+        grid-column-start: 4;
+        grid-column-end:13;
+        grid-row: 1;
+        justify-self: center;
+        margin: 10px 20px;
+        width: 80%;
+    }
+
+    /* CSS de la page d'accueil pour la rendre responsive. */ 
+
+    .New{
+        margin-top: 100px;
+        background: url('../img/Interstellar_phone.jpg') no-repeat center;
+    }
+
+    .New h1{
+        grid-column-start : 2;
+        grid-column-end: 10;
+        font-size: 26px;
+    }
+
+    .New h2{
+        grid-column-start: 4;
+        grid-column-end: 11;
+        font-size: 40px;
+    }
+
+    .main_contain h1{
+        font-size: 28px;
+    }
+
+    .slideshow a{
+        margin: 0px 6px;
+    }
+
+    /* CSS de la page détaillée d'un film et d'une série permettant de la rendre responsive. */
+
+    .entete{
+        margin-top: 100px;
+    }
+
+    .entete img{
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    .entete h1{
+        grid-column-start: 6;
+        grid-column-end: 12;
+    }
+
+    .entete p{
+        grid-column-start: 6;
+        grid-column-end: 12;
+        font-size: 18px;
+    }
+
+    .details_comments{
+        display: inline-grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(18, 80px);
+        height: 1600px;
+    }
+
+    .synops{
+        grid-column-start: 2;
+        grid-column-end: 6;
+    }
+
+    .details_comments p{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row : 2;
+        margin: 0;
+    }
+    
+    #zone_avis{
+        grid-column-start: 2;
+        grid-column-end: 12;
+    }
+
+    .avis{
+        grid-column-start: 2;
+        grid-column-end: 7 ;
+    }
+
+    .avis_1{
+        grid-column-start: 2;
+        grid-column-end: 12 ;
+    }
+
+    .avis_2{
+        grid-column-start: 2;
+        grid-column-end: 12 ;
+    }
+
+    .avis_3{
+        grid-column-start: 2;
+        grid-column-end: 12 ;
+    }
+
+    .other_com{
+        grid-column-start: 2;
+        grid-column-end: 9;
+        grid-row: 13;
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    .reco{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row: 14;
+        text-align: left;
+        padding-top: 10px;
+        border-top: solid 1px #424242;
+    }
+
+    .recommandation{
+        grid-column-start: 1;
+        grid-column-end: 13 ;
+        grid-row-start: 15;
+        grid-row-end: 19;
+        display: inline-grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(4, 80px);
+        height: 280px;
+        border-left: none;
+    }
+    
+    .recommandation img{
+        max-height: 80%;
+        padding: 0px 10px;
+        max-width:none;
+    }
+
+    .img1{
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+    
+    .name_1{
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row:5;
+    }
+    
+    .img2{
+        grid-column-start: 8;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 5; 
+    }
+    
+    .name_2{
+        grid-column-start: 8;
+        grid-column-end: 11;
+        grid-row: 5;
+    }
+    
+    .other_reco{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row: 18;
+    }
+
+    .episod_list img{
+        margin: 0px 10px;
+    }
+
+    /* CSS pour rendre la page de recherche responsive */ 
+
+    .res_search{
+        margin-top: 100px;
+    }
+
+    /* CSS pour rendre le footer responsive */
+
+    footer{
+        display: inline-grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 30px 30px 50px 20px;
+        height: 130px;
+        font-size: 14px;
+    }
+
+    .social{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row: 2;
+        align-self: center;
+    }
+
+    .mentions_legales{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row:4;
+    }
+    
+    .about_us{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row: 1;
+    }
+    
+    .support{
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row:1;
+    }
+    
+    .contact{
+        grid-column-start: 9;
+        grid-column-end: 12;
+        grid-row:1;
+    }
+    
+    .social_media{
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row:3;
+    }
+
+    .sm_logo{
+        margin: 0 10px;
+    }
+    
+    .about-us{
+    margin-top: 100px;
+    }
+
+    /* CSS pour rendre la page de favoris responsive. */ 
+
+    .favoris{
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+
+    /* CSS permettant de changer l'image de fond de l'accueil sur très petit écran. */ 
+
+    .New{
+        background: url('../img/Interstellar-phone2.jpg') no-repeat center;
+    }
+
+}
